@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/ic_moviebackground"
+        android:layout_marginTop="40dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/list_item_soonsimp"
+            android:layout_width="130dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            fresco:roundedCornerRadius="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/rela_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/list_item_soonsimp">
+
+            <TextView
+                android:id="@+id/list_item_soonname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="哈哈哈哈"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="7dp"
+                android:src="@drawable/ic_favorite" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/list_item_soondetils"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="5"
+            android:layout_below="@id/rela_view"
+            android:layout_toRightOf="@id/list_item_soonsimp"
+            android:text="dfasfsafsd"
+            android:textColor="#fff" />
+    </RelativeLayout>
+</RelativeLayout>

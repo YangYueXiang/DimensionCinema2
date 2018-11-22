@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="@dimen/dp_300">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       >
+       <RadioGroup
+           android:id="@+id/radio_cinemadetailpop"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="@dimen/dp_20"
+           >
+           <RadioButton
+               android:id="@+id/rb_cinemapopdetail"
+               android:layout_width="@dimen/dp_0"
+               android:layout_weight="2"
+               android:button="@null"
+               android:text="详情"
+               android:textSize="16sp"
+               android:gravity="center"
+               android:layout_height="wrap_content" />
+           <RadioButton
+               android:id="@+id/rb_cinemapopcomment"
+               android:layout_width="@dimen/dp_0"
+               android:layout_weight="2"
+               android:button="@null"
+               android:gravity="center"
+               android:text="评论"
+               android:layout_height="wrap_content" />
+           <ImageView
+               android:id="@+id/img_down"
+               android:layout_width="@dimen/dp_24"
+               android:layout_gravity="center"
+               android:src="@drawable/ic_down"
+               android:layout_marginRight="@dimen/dp_24"
+               android:layout_height="@dimen/dp_24" />
+       </RadioGroup>
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recycler_detailpop"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+       <LinearLayout
+           android:id="@+id/ll_commentall"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="@dimen/dp_24"
+                   android:layout_height="@dimen/dp_24"
+                   android:src="@drawable/ic_locationpop" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/cinema_details_location"
+                   android:layout_gravity="center_vertical"
+                   android:text="海淀区悦秀路99号三层"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="@dimen/dp_24"
+                   android:layout_height="@dimen/dp_24"
+                   android:src="@drawable/ic_phonepop" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/cinema_details_tel"
+                   android:layout_gravity="center_vertical"
+                   android:text="海淀区悦秀路99号三层"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="@dimen/dp_24"
+                   android:layout_height="@dimen/dp_24"
+                   android:src="@drawable/ic_lastpop" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_gravity="center_vertical"
+                   android:text="乘车路线"/>
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="地铁:"
+               android:layout_marginTop="20dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="13号线,西二旗跌铁站"
+               android:id="@+id/cinema_details_subway"
+               android:layout_marginTop="10dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="公交:"
+               android:layout_marginTop="10dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/cinema_details_bus"
+               android:text="13号线,西二旗跌铁站"
+               android:layout_marginTop="10dp"/>
+       </LinearLayout>
+   </LinearLayout>
+
+</LinearLayout>

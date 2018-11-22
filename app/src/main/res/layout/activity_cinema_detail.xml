@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CinemaDetailActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_310"
+        android:background="@drawable/ic_cinemadetailpop"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_30"
+            android:orientation="horizontal"
+            >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/simp_detailcinema"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:src="@mipmap/ic_launcher" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/simp_detailcinema"
+                android:layout_marginLeft="@dimen/dp_10"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_detailcinema_name"
+                    android:textSize="@dimen/dp_14"
+                    android:text="放大镜哦欸"
+                    />
+                <TextView
+                    android:id="@+id/tv_detailcinema_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="weghtrfyjulkthyujol"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/img_go"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:src="@drawable/ic_go"
+                />
+        </RelativeLayout>
+
+        <recycler.coverflow.RecyclerCoverFlow
+            android:id="@+id/detailcinema_topphoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_223"
+            android:layout_marginTop="@dimen/dp_20"></recycler.coverflow.RecyclerCoverFlow>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_whenplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
